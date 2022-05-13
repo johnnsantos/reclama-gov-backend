@@ -1,7 +1,11 @@
-# Local Maps Stores - API
+# ReclamaGov - API
 
-Esta é uma API para cadastro e obtenção de estabelecimentos com localização.
+Esta é uma API para cadastro e obtenção de pontos de melhoria das cidades.
 
+## Tecnologias usadas:
+
+- Node
+- Express
 
 ## Install
 
@@ -11,18 +15,17 @@ Esta é uma API para cadastro e obtenção de estabelecimentos com localização
 
     npm run dev
 
-
 # REST API
 
 A API possui os seguintes endpoints:
 
-## Buscar todos estabelecimentos:
+## Buscar todos pontos de melhoria:
 
 ### Request
 
-`GET /stores`
+`GET /requirements`
 
-    curl -i -H 'Accept: application/json' http://localhost:3000/stores
+    curl -i -H 'Accept: application/json' http://localhost:3000/requirements
 
 ### Response
 
@@ -34,36 +37,36 @@ A API possui os seguintes endpoints:
     Content-Length: 180
 
     [
-		{
-		"name": "teste",
-		"description": "testando a loja",
-		"category": "Restaurante",
-		"contact": "31973100788",
-		"lat": 12121221,
-		"long": 551551,
-		"id": "47764bf5-4e9c-4de3-baee-de291a340b88"
-		}
-	]
+    	{
+    	"local_name": "teste",
+    	"description": "testando",
+    	"category": "Segurança",
+    	"contact": "31973100788",
+    	"lat": 12121221,
+    	"long": 551551,
+    	"id": "47764bf5-4e9c-4de3-baee-de291a340b88"
+    	}
+    ]
 
-## Cadastrar um novo estabelecimento
+## Cadastrar um novo pedido de melhoria
 
 ### Request
 
-`POST /stores`
+`POST /requirements`
 
 ```
 curl --request POST \
-  --url http://localhost:3000/stores \
+  --url http://localhost:3000/requirements \
   --header 'Content-Type: application/json' \
   --data '{
-	"name": "teste",
+	"local_name": "teste",
 	"description": "testando a loja",
-	"category": "Restaurante",
+	"category": "Segurança",
 	"contact": "31973100788",
 	"lat": 12121221,
 	"long": 551551
 }'
-````
+```
 
 ### Response
 
@@ -72,14 +75,14 @@ curl --request POST \
     Status: 201 Created
     Connection: close
     Content-Type: application/json
-    Location: /thing/1
+    Location: /requirements/1
     Content-Length: 180
 
     {
-	"name": "teste",
-	"description": "testando a loja",
-	"category": "Restaurante",
-	"contact": "31973100788",
-	"lat": 12121221,
-	"long": 551551
-	}
+    "local_name": "teste",
+    "description": "testando a loja",
+    "category": "Restaurante",
+    "contact": "31973100788",
+    "lat": 12121221,
+    "long": 551551
+    }
