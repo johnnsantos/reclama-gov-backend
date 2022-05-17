@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsnd --respawn index.ts"
+    "dev": "tsnd --respawn index.ts",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
