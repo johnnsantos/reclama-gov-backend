@@ -1,7 +1,7 @@
 module.exports ={
   "type": "postgres",
   "url": process.env.DATABASE_URL,
-  "options": {
+  "extra": {
     "ssl": true
   },
   "entities": ["src/entity/**/*.ts"],
