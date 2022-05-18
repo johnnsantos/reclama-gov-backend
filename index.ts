@@ -4,8 +4,7 @@ import express from "express";
 import { createConnection } from "typeorm";
 import cors from "cors";
 import * as RequirementController from "./src/api/RequirementController";
-
-dotenv.config();
+require('./dbConfig.js')
 
 const PORT = process.env.PORT;
 
