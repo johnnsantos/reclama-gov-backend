@@ -1,8 +1,11 @@
+import dotenv from 'dotenv';
 import "reflect-metadata";
 import express from "express";
 import { createConnection } from "typeorm";
 import cors from "cors";
 import * as RequirementController from "./src/api/RequirementController";
+
+dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
