@@ -3,7 +3,8 @@ module.exports ={
   "url": process.env.DATABASE_URL,
   "ssl": true,
   "extra": {
-    "ssl": true
+    "ssl": true,
+    "rejectUnauthorized": false
   },
   "entities": ["src/entity/**/*.ts"],
   "migrations": ["src/migration/**/*.ts"],
