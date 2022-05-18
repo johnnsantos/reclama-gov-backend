@@ -1,6 +1,6 @@
 module.exports ={
   "type": "postgres",
-  "host": process.env.DATABASE_URL,
+  "url": process.env.DATABASE_URL,
   "entities": ["src/entity/**/*.ts"],
   "migrations": ["src/migration/**/*.ts"],
   "subscribers": ["src/subscriber/**/*.ts"],
