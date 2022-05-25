@@ -2,13 +2,12 @@ import { createConnection } from "typeorm";
 
 require("dotenv").config();
 
-const rootDir = process.env.NODE_ENV === "development" ? "src" : "dist";
+const rootDir = process.env.NODE_ENV === "development" ? "src" : "dist/src";
 
 const extensionFile = process.env.NODE_ENV === "development" ? "ts" : "js";
 
 const config: any = {
   type: "postgres",
-  //url: process.env.DATABASE_URL,
   host: process.env.TYPEORM_HOST,
   port: process.env.TYPEORM_PORT || 5432,
   username: process.env.TYPEORM_USERNAME,
